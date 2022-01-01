@@ -22,23 +22,45 @@ $Corporate-2: #eff3f6;
   position: relative;
   .owl-item {
     justify-content: center;
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      align-items: center;
+    }
     .box-detail,
     .box-img {
       background-color: $Corporate-2;
       width: 450px;
       height: 450px;
+      @media screen and (max-width: 850px) {
+        height: 400px;
+      }
+      @media screen and (max-width: 450px) {
+        width: 350px;
+      }
     }
-    img {
+    .box-img {
+      @media screen and (max-width: 450px) {
+        height: 350px;
+      }
+    }
+    .fade-img {
       object-fit: cover;
     }
     .fade-detail {
       padding: 2em 4em;
+      @media screen and (max-width: 850px) {
+        padding: 1em 2em;
+      }
+      @media screen and (max-width: 450px) {
+        padding: 0.5em 1em;
+      }
     }
     h2 {
       font-size: $Font1;
     }
     h3 {
       font-size: $Font2;
+      color: $Corporate-1;
     }
     p {
       font-size: $Font-text;
@@ -48,10 +70,21 @@ $Corporate-2: #eff3f6;
     position: absolute;
     bottom: 20px;
     right: 0;
-    left: 200px;
+    left: 300px;
+    @media screen and (max-width: 850px) {
+      top: 75px;
+      left: 0;
+      bottom: 100%;
+    }
+    @media screen and (max-width: 450px) {
+      top: 50px;
+    }
   }
   .box-buttons {
     gap: 20px;
+    @media screen and (max-width: 850px) {
+      justify-content: center;
+    }
     img {
       max-width: 10px;
       transform: rotate(180deg);
@@ -64,8 +97,8 @@ $Corporate-2: #eff3f6;
       gap: 15px;
       width: 110px;
       cursor: pointer;
-      &:hover{
-        filter: saturate(120%)
+      &:hover {
+        filter: saturate(120%);
       }
     }
     .read-more {
@@ -89,6 +122,12 @@ $Corporate-2: #eff3f6;
     justify-content: center;
     width: 100%;
     bottom: 0;
+    @media screen and (max-width: 850px) {
+      bottom: 375px;
+    }
+    @media screen and (max-width: 450px) {
+      bottom: 375px;
+    }
     .prev,
     .next {
       cursor: pointer;

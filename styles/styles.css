@@ -30,6 +30,18 @@
           justify-content: center;
 }
 
+@media screen and (max-width: 850px) {
+  .owl-carousel .owl-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .owl-carousel .owl-item .box-detail,
 .owl-carousel .owl-item .box-img {
   background-color: #eff3f6;
@@ -37,7 +49,27 @@
   height: 450px;
 }
 
-.owl-carousel .owl-item img {
+@media screen and (max-width: 850px) {
+  .owl-carousel .owl-item .box-detail,
+  .owl-carousel .owl-item .box-img {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .owl-carousel .owl-item .box-detail,
+  .owl-carousel .owl-item .box-img {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .owl-carousel .owl-item .box-img {
+    height: 350px;
+  }
+}
+
+.owl-carousel .owl-item .fade-img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -46,12 +78,25 @@
   padding: 2em 4em;
 }
 
+@media screen and (max-width: 850px) {
+  .owl-carousel .owl-item .fade-detail {
+    padding: 1em 2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .owl-carousel .owl-item .fade-detail {
+    padding: 0.5em 1em;
+  }
+}
+
 .owl-carousel .owl-item h2 {
   font-size: 2em;
 }
 
 .owl-carousel .owl-item h3 {
   font-size: 1.1em;
+  color: #2ba599;
 }
 
 .owl-carousel .owl-item p {
@@ -62,11 +107,33 @@
   position: absolute;
   bottom: 20px;
   right: 0;
-  left: 200px;
+  left: 300px;
+}
+
+@media screen and (max-width: 850px) {
+  .owl-carousel .owl-dots {
+    top: 75px;
+    left: 0;
+    bottom: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .owl-carousel .owl-dots {
+    top: 50px;
+  }
 }
 
 .owl-carousel .box-buttons {
   gap: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .owl-carousel .box-buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .owl-carousel .box-buttons img {
@@ -118,6 +185,18 @@
           justify-content: center;
   width: 100%;
   bottom: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .owl-carousel .nav-buttons {
+    bottom: 375px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .owl-carousel .nav-buttons {
+    bottom: 375px;
+  }
 }
 
 .owl-carousel .nav-buttons .prev,
