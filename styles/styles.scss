@@ -1,0 +1,124 @@
+$Font1: 2em;
+$Font2: 1.1em;
+$Font-text: 0.9em;
+$Corporate-1: #2ba599;
+$Corporate-2: #eff3f6;
+.body,
+.owl-item,
+.box-img,
+.nav-buttons,
+.box-buttons,
+.read-more,
+.button-promotion {
+  display: flex;
+}
+.body {
+  height: 110vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.owl-carousel {
+  position: relative;
+  .owl-item {
+    justify-content: center;
+    .box-detail,
+    .box-img {
+      background-color: $Corporate-2;
+      width: 450px;
+      height: 450px;
+    }
+    img {
+      object-fit: cover;
+    }
+    .fade-detail {
+      padding: 2em 4em;
+    }
+    h2 {
+      font-size: $Font1;
+    }
+    h3 {
+      font-size: $Font2;
+    }
+    p {
+      font-size: $Font-text;
+    }
+  }
+  .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 200px;
+  }
+  .box-buttons {
+    gap: 20px;
+    img {
+      max-width: 10px;
+      transform: rotate(180deg);
+    }
+    .read-more,
+    .button-promotion {
+      padding: 0.5em 0;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 110px;
+      cursor: pointer;
+      &:hover{
+        filter: saturate(120%)
+      }
+    }
+    .read-more {
+      background-color: $Corporate-2;
+      border: 1px solid $Corporate-1;
+    }
+    .read-more-link {
+      text-decoration: none;
+      color: $Corporate-1;
+    }
+
+    .button-promotion {
+      background-color: $Corporate-1;
+      border: 1px solid $Corporate-2;
+      color: $Corporate-2;
+    }
+  }
+
+  .nav-buttons {
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    bottom: 0;
+    .prev,
+    .next {
+      cursor: pointer;
+      border: none;
+      z-index: 10;
+      img {
+        max-width: 15px;
+        padding: 1em;
+        filter: hue-rotate(180deg);
+      }
+    }
+    .prev {
+      background-color: $Corporate-2;
+      border-radius: 5px 0 0 5px;
+    }
+    .next {
+      border-radius: 0 5px 5px 0;
+      background-color: $Corporate-1;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: $Corporate-1;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: #aedad7;
+}
