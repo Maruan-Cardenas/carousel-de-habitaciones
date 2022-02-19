@@ -6,7 +6,6 @@ $(function(){
  
   owl.hide()
 
-  $(window).scroll(function(){
     owl.fadeIn()
     owl.owlCarousel({
     items:1,
@@ -17,7 +16,6 @@ $(function(){
     loop:true,
     center:true,
   })
-})
 
   owl.on('translated.owl.carousel', function() {
     owlImg.fadeIn(1500)
